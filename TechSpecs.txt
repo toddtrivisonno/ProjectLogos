@@ -18,3 +18,4 @@ What 3rd party tech is needed?
 		-New King James Version
 		-Greek New Testament - Koine Greek
 		-Hebrew Bible
+
