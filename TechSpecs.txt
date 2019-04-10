@@ -1,0 +1,20 @@
+Project Logos - Tech Specs
+
+What requirements do I have for this project?
+
+Displays: -Laptop/computer screen - highest priority
+	  -Cell phone display
+
+Browser support: Ideally most popular. Chrome, Firefox, Safari…
+
+Programming language: Javascript
+
+What 3rd party tech is needed?
+	-Bible API for:
+		-English Standard Version
+		-New International Version
+		-New American Standard Bible
+		-King James Version
+		-New King James Version
+		-Greek New Testament - Koine Greek
+		-Hebrew Bible

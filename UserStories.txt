@@ -1,0 +1,29 @@
+Project Logos - User Stories
+
+Who are your users?
+What are they going to do on website?
+Why are they going to use your website?
+
+Write out examples in complete sentences/thoughts.
+
+Users: Layman, Clergy, Students/studiers, Teachers
+
+As any user, I would like to be able to type in a section of the Bible: books, chapters, or verses, and select two translations and have them displayed side by side
+
+As a layman, I would like to see the difference two different translations of the Bible side by side to easily see what the differences are and to help me better understand the verses.
+
+As a pastor, I would like to be able to easily compare and contrast different translations of the Bible for teaching my congregation.
+
+As a user, I would like to change how the text is displayed, either side by side, or interlacing the two different translations.
+
+As a user, I would like to be able to type the section I want to read in shorthand to more quickly bring up the text.
+
+As a user, I would like clear/concise instructions on how to use website.
+
+
+User Journey - Map out how users proceed through website
+
+Create three 3-day sprints for this project
+
+
+
