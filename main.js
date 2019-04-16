@@ -4,35 +4,30 @@ document.getElementById('Search').addEventListener('click', getVerse);
 function getVerse() {
    event.preventDefault();
    console.log('search button pressed')
+
+   const apiURL = "https://bible-api.com/"
+   let passage = document.getElementById("passage").value
+   let translation = document.getElementsByClassName("translation").value
+   // const url = apiURL + passage + "?translation=" + translation
+   const url = apiURL + passage
+
+fetch(url)
+   .then(
+   function(x) {
+       return x.json();
+   }
+).then(
+   function(response){
+       console.log(response);
+
+       let reference = response.reference;
+       document.getElementById('passage-left').innerHTML = reference;
+
+       let passage = response.text;
+       document.getElementById('passage-left-verse').innerHTML = passage;
+   })
 }
 
-// let results = fetch('https://bible-api.com/romans+12:1-2');
-// results.then(
-//    function(x) {
-//        return x.json();
-//    }
-// ).then(
-//    function(y){
-//        response = y;
-//        console.log(y);
-
-//        let reference = y.reference;
-//        document.getElementById('passage-left').innerHTML = reference;
-
-//        let passage = y.verses[0].text;
-//        document.getElementById('passage-left-verse').innerHTML = passage;
-//    })
-
-
-
-// const options = {
-//    method: 'GET',
-//    url: 'https://api.esv.org/v3/passage/text/' + '?q=' + 'John+11:35',
-//    headers: {
-//       'Authorization: Token 5663b143d5c6364d90ae31114387eac152a8dcc5'
-//    },
-//    json: true
-// };
 
 // curl -H 'Authorization: Token 5663b143d5c6364d90ae31114387eac152a8dcc5' 'https://api.esv.org/v3/passage/text/?q=John+11:35'
 
