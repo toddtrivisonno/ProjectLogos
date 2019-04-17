@@ -1,31 +1,61 @@
 
 document.getElementById('Search').addEventListener('click', getVerse);
 
+// function translate(selectTranslation) {
+//    var value = selectTranslation.value;
+//    console.log(value)
+// }
+
+
 function getVerse() {
    event.preventDefault();
    console.log('search button pressed')
 
    const apiURL = "https://bible-api.com/"
    let passage = document.getElementById("passage").value
-   let translation = document.getElementsByClassName("translation").value
-   // const url = apiURL + passage + "?translation=" + translation
+   // let translation = document.getElementsByClassName("translation").value
    const url = apiURL + passage
-
-fetch(url)
-   .then(
-   function(x) {
-       return x.json();
-   }
-).then(
-   function(response){
-       console.log(response);
-
+   const kjv = apiURL + passage + "?translation=kjv"
+   // const selectTranslation = document.querySelector('.translation');
+   //    selectTranslation.addEventListener('change')
+   // selectTranslation.addEventListener('change', (event) => {
+      //    const result = document.querySelector('.translation');
+      //    result.textContent = `You like ${event.target.value}`;
+      //   });
+      // const url = apiURL + passage + "?translation=" + selectTranslation
+      // const url = apiURL + passage + "?translation=" + translation
+      
+      fetch(url)
+      .then(
+         function(x) {
+            return x.json();
+         }
+         ).then(
+            function(response){
+               console.log(response);
+               
        let reference = response.reference;
        document.getElementById('passage-left').innerHTML = reference;
 
        let passage = response.text;
        document.getElementById('passage-left-verse').innerHTML = passage;
    })
+
+   fetch(kjv)
+   .then(
+      function(x) {
+         return x.json();
+      }
+      ).then(
+         function(response){
+            console.log(response);
+            
+    let reference = response.reference;
+    document.getElementById('passage-right').innerHTML = reference;
+
+    let passage = response.text;
+    document.getElementById('passage-right-verse').innerHTML = passage;
+})
 }
 
 
