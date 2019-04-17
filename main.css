@@ -1,6 +1,63 @@
+body {
+   background-color: linen;
+}
+
+h1, h2 {
+   display: grid;
+   justify-items: center;
+   align-items: center;
+}
+
 form {
+   display: grid;
+   justify-items: center;
+   align-items: center;
+   font-size: 1.25em;
+   width: 45vw;
+   margin: 0px;
+   margin-left: auto;
+   margin-right: auto;
    /* To see the outline of the form */
    padding: 1em;
    border: 1px solid #CCC;
    border-radius: 1em;
  }
+
+#boxes {
+   display: inline-flex;
+}
+
+ #left {
+   width: 45vw;
+   padding: 1em;
+   border: 1px solid #CCC;
+   border-radius: 1em;
+ }
+
+ #passage-left {
+    font-size: 1.25em;
+ }
+
+ #passage-left-verse {
+    font-size: 1.1em;
+ }
+
+#right {
+   width: 45vw;
+   padding: 1em;
+   border: 1px solid #CCC;
+   border-radius: 1em;
+}
+
+ #passage-right {
+   font-size: 1.25em;
+}
+
+#passage-right-verse {
+   font-size: 1.1em;
+}
+
+#select-right {
+   display: grid;
+   justify-items: right;
+}
